@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@100;400&display=swap');
+
+:root {
+    --background-color: #000000;
+    --primary-color: #CBD2D870;
+    --secondary-color: #2B80A7;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Urbanist', sans-serif;
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    color: var(--secondary-color);
+}
+
+p {
+    color: var(--primary-color);
+}
+
+header {
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a {
+    color: var(--secondary-color);
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    width: auto;
+}
+
+nav a:nth-child(n-3) {
+    margin-right: 50px;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+}
+
+img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+.main-content {
+    width: 800px;
+    margin-left: 30px;
+    text-align: left;
+}
+
+h1 {
+    font-size: 100px;
+    padding-bottom: 10px;
+    margin: 0;
+}
+
+span {
+    font-weight: 100;
+}
+
+p {
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+footer {
+    padding: 30px 0;
+    font-size: 20px;
+}
+
+footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 400;
+}
