@@ -20,6 +20,8 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
@@ -30,14 +32,14 @@ p {
     color: var(--primary-color);
 }
 
-header {
-    padding: 20px;
-}
+
 
 nav {
     display: flex;
+    padding: 20px;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
 }
 
 nav a {
@@ -48,13 +50,19 @@ nav a {
     width: auto;
 }
 
-nav a:nth-child(n-3) {
+a:nth-child(-n+3) {
     margin-right: 50px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
 }
 
 .main-container {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     text-align: left;
 }
@@ -81,18 +89,18 @@ span {
     font-weight: 100;
 }
 
-p {
-    font-size: 20px;
-    margin-left: 5px;
-}
-
 footer {
-    padding: 30px 0;
-    font-size: 20px;
+    padding: 20px;
 }
 
-footer a {
-    color: var(--primary-color);
+.footer-content > a {
+    color: var(--secondary-color);
     text-decoration: none;
-    font-weight: 400;
+    font-size: 20px;
+    font-weight: 100;
+    letter-spacing: 1px;
+}
+
+.footer-content > a:visited {
+    color: chartreuse;
 }
