@@ -9,6 +9,10 @@ body {
     background-color: black;
 }
 
+header {
+    height: 10vh;
+}
+
 .hero {
     height: 90vh;
     background-color: aqua;
