@@ -3,44 +3,166 @@
 * {
     padding: 0;
     margin: 0;
+    scroll-margin-top: 100px;
+}
+
+:root {
+    --primary-color: #2a82a8;
+    --secondary-color: #9b9b9b;
+    --tertiary-color: #060606;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    background-color: black;
+    color: var(--primary-color);
+    background-color: var(--tertiary-color);
+    font-family: 'Urbanist', sans-serif;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: inherit;
+    margin: auto;
+    max-width: 1400px;
+    margin: 10px 20px;
+}
+
+.secondary-nav {
+    display: none;
+    
+}
+
+.secondary-nav a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 20px;
+}
+
+.secondary-nav a:hover {
+    animation: navLinkHover 1s linear;
+}
+
+@keyframes navLinkHover {
+    0% {
+      opacity: 0;
+    }
+    50% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
+
+
+
+.secondary-nav a:nth-child(-n+4) {
+    margin-right: 20px;
 }
 
 header {
     height: 5vh;
-    background-color: blueviolet;
+    display: none;
+    position: sticky;
 }
 
 .hero-content {
     height: 85vh;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
+    max-width: 1400px;
+   
+}
+
+.hero-content h1 {
+    font-weight: 100;
+    font-size: 100px;
+    color: var(--primary-color);
+}
+
+.hero-content p {
+    font-size: 25px;
+    font-weight: 100;
+    color: var(--secondary-color);
+}
+
+.hero-content span {
+    font-weight: 400;
 }
 
 .hero-content * {
     margin: 10px;
 }
 
-.hero-prompt {
-    height: 10vh;
-    background-color: violet;
-    display: grid;
-    place-items: center;
+.hero-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-text h1 {
+    font-weight: 400;
+
+}
+
+.hero-text a {
+    text-decoration: none;
+    text-align: center;
+    padding: 5px 10px;
+    width: 200px;
+    border-radius: 10px;
+    border: var(--secondary-color) 1px solid;
+    color: black;
+    background-color: var(--secondary-color);
+    margin-top: 20px;
+}
+
+.hero-text a:hover {
+    text-decoration: none;
+    text-align: center;
+    padding: 5px 10px;
+    width: 200px;
+    border: var(--primary-color) 1px solid;
+    background-color: var(--primary-color);
 }
 
 .hero img {
-    width: 300px;
-    border-radius: 50%;
+    display: none;
+}
+
+.hero-prompt {
+    height: 10vh;
+    display: grid;
+    place-items: center;
+    margin-bottom: 50px;
+}
+
+.material-symbols-outlined {
+    animation: scrollPrompt 1.8s infinite;
+    position: relative;
+    transform: scale(1.5);
+    padding-top: 10px;
+    color: var(--primary-color);
+}
+
+.material-symbols-outlined  span {
+  font-size: 100;
 }
 
 
-
+@keyframes scrollPrompt {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 20px;
+  }
+  100% {
+    top: 0;
+  }
+}
 
 .main {
     display: grid;
@@ -271,15 +393,79 @@ header {
 }
 
 
-
-
-
 @media screen and (min-width: 768px) {
+
+    header {
+        display: block;
+        position: fixed;
+        margin: auto;
+        width: 100%;
+        background-color: #060606;
+        z-index: 10;
+    } 
+
+    .nav-container {
+        margin: auto;
+    }
+
+    .secondary-nav {
+        display: block;
+        margin: auto;
+    }
+
+    .hero-content {
+        height: 87vh;
+        max-width: 1400px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .hero-content a {
+        margin: auto;
+        margin-top: 20px;
+    }
+
+    .hero img {
+        display: block;
+        width: 250px;
+        border-radius: 50%;
+    }
+
+    .hero-content h1 {
+        font-size: 80px;
+    }
+}
+
+
+
+@media screen and (min-width: 1280px) {
+
+    .hero img {
+        display: block;
+        width: 300px;
+        border-radius: 50%;
+    }
 
     .hero-content {
         flex-direction: row;
         align-items: center;
+        justify-content: center;
+        padding: 0px 20px;
         text-align: left;
+    }
+
+    .hero-content h1 {
+        font-size: 110px;
+    }
+
+    .hero-text a {
+        margin: 0;
+        margin-top: 20px;
+        margin-left: 10px;
     }
 
     .main {

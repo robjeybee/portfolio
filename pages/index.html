@@ -8,12 +8,21 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="/pages/style.css">
     <link rel="icon"  type="image/png" href="/images/myfavicon.svg">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <title>hey there, I'm Rob</title>
 </head>
 <body>
 
     <header class="header">
-        <nav></nav>
+        <nav class="nav-container">
+            <div class="secondary-nav">
+                <a href="#">Home</a>
+                <a href="#projects">Projects</a>
+                <a href="#blog">Blog</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
     </header>
 
     <section class="hero">
@@ -22,17 +31,17 @@
                 <img src="/images/cgime.jpg" alt="">
             </div>
             <div class="hero-text">
-                <h1>Lorem, ipsum.</h1>
-                <p>Lorem ipsum dolor sit amet consectetur.</p>
-                <button>CTA</button>
+                <h1>hey there, I'm Rob</h1>
+                <p>I'm a Goldsmiths graduating, Public Relations career changing, junior web developer putting fun and creativity into websites. Sometimes I run, sometimes I cycle.</p>
+                <a href="#contact">Let's chat</a>
             </div>
         </div>
         <div class="hero-prompt">
-            <button>click this button</button>
+            <a href="#projects"><span class="material-symbols-outlined">south</span></a>
         </div>
     </section>
     
-    <main class="main">
+    <main class="main" id="projects">
         <div class="project heading"><h1>Projects</h1></div>
         <div class="project project1">
             <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
@@ -58,7 +67,7 @@
     </main>
 
 
-    <div class="parent">
+    <div class="parent" id="blog">
         <div class="child childA">Blog</div>
         <div class="child childB">
             <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
@@ -73,7 +82,7 @@
         <div class="child childF">This is the footer</div>
      </div>
 
-     <div class="parent2">
+     <div class="parent2" id="about">
         <div class="child childA">About me</div>
         <div class="child childB">
             <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
@@ -118,7 +127,7 @@
         <div class="child childF">This is the footer</div>
      </div>
 
-     <section class="contact">
+     <section class="contact" id="contact">
             <div class="contact-title"><h1>Contact</h1></div>
             <div class="contact-content"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil voluptatem laborum consequuntur neque soluta expedita explicabo, voluptas odit sunt ipsa possimus illo culpa libero optio omnis dolorem praesentium sed. Earum!</p></div>
             <div class="contact-footer"><button>click me</button></div>
